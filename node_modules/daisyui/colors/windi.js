@@ -1,1 +1,0 @@
-const colorValues=require("./colorNames");let colorObject={transparent:"transparent",current:"currentColor"};for(const[r,o]of Object.entries(colorValues))colorObject[r]=`hsla(var(${o}) / var(--tw-bg-opacity, 1))`;module.exports=colorObject;
