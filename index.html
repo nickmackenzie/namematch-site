@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/tailwind.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1/dist/tailwind.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@1.3.2/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <title>Name Match</title>
+  </head>
+  <body>
+    <div id="__next">
+      <nav
+        class="
+          fixed
+          z-50
+          w-full
+          bg-white
+          top-0
+          flex flex-wrap
+          items-center
+          justify-between
+          px-2
+          py-3
+          shadow-lg
+        "
+      >
+        <div
+          class="
+            container
+            px-4
+            mx-auto
+            flex flex-wrap
+            items-center
+            justify-between
+          "
+        >
+          <div
+            class="
+              w-full
+              relative
+              flex
+              justify-between
+              lg:w-auto
+              lg:static
+              lg:block
+              lg:justify-start
+            "
+          >
+            <a
+              class="
+                text-sm
+                font-bold
+                leading-relaxed
+                inline-block
+                mr-4
+                py-2
+                whitespace-nowrap
+                uppercase
+                text-blueGray-700
+              "
+              href="/learning-lab/tailwind-starter-kit/presentation"
+              >Tailwind Starter Kit</a
+            ><button
+              class="
+                cursor-pointer
+                text-xl
+                leading-none
+                px-3
+                py-1
+                border border-solid border-transparent
+                rounded
+                bg-transparent
+                block
+                lg:hidden
+                outline-none
+                focus:outline-none
+              "
+              type="button"
+            >
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+          <div
+            class="lg:flex flex-grow items-center hidden"
+            id="example-navbar-danger"
+          >
+            <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
+              <li class="nav-item">
+                <a
+                  href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/learning-lab/tailwind-starter-kit#/presentation"
+                  class="
+                    px-3
+                    py-2
+                    flex
+                    items-center
+                    text-xs
+                    uppercase
+                    font-bold
+                    text-blueGray-700
+                    hover:text-blueGray-500
+                  "
+                  target="_blank"
+                  ><i
+                    class="
+                      fab
+                      fa-facebook-square
+                      text-lg
+                      leading-lg
+                      text-blueGray-400
+                    "
+                  ></i
+                  ><span class="ml-2">Share</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="https://twitter.com/intent/tweet?text=Check%20Tailwind%20Starter%20Kit%2C%20a%20beautiful%20extension%20of%20%23TailwindCSS%20made%20by%20%40CreativeTim%20%23webdesign%20%23starterkit&amp;url=https%3A%2F%2Fwww.creative-tim.com%2Flearning-lab%2Ftailwind-starter-kit%23%2Fpresentation"
+                  class="
+                    px-3
+                    py-2
+                    flex
+                    items-center
+                    text-xs
+                    uppercase
+                    font-bold
+                    text-blueGray-700
+                    hover:text-blueGray-500
+                  "
+                  target="_blank"
+                  ><i
+                    class="fab fa-twitter text-lg leading-lg text-blueGray-400"
+                  ></i
+                  ><span class="ml-2">Tweet</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="
+                    px-3
+                    py-2
+                    flex
+                    items-center
+                    text-xs
+                    uppercase
+                    font-bold
+                    text-blueGray-700
+                    hover:text-blueGray-500
+                  "
+                  href="/learning-lab/tailwind-starter-kit/documentation/quick-start"
+                  ><i
+                    class="far fa-file-alt text-lg leading-lg text-blueGray-400"
+                  ></i
+                  ><span class="ml-2">Docs</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="
+                    download-button
+                    px-3
+                    py-2
+                    flex
+                    items-center
+                    text-xs
+                    uppercase
+                    font-bold
+                    text-blueGray-700
+                    hover:text-blueGray-500
+                  "
+                  href="/learning-lab/tailwind-starter-kit/documentation/download"
+                  ><i
+                    class="
+                      fas
+                      fa-arrow-alt-circle-down
+                      text-lg
+                      leading-lg
+                      text-blueGray-400
+                    "
+                  ></i
+                  ><span class="ml-2">Download</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  href="https://github.com/creativetimofficial/tailwind-starter-kit/archive/designer-files.zip?ref=tsk-navbar"
+                  class="
+                    download-button
+                    px-3
+                    py-2
+                    flex
+                    items-center
+                    text-xs
+                    uppercase
+                    font-bold
+                    text-blueGray-700
+                    hover:text-blueGray-500
+                  "
+                  ><i
+                    class="fab fa-sketch text-lg leading-lg text-blueGray-400"
+                  ></i
+                  ><span class="ml-2">Download Designer</span></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <section
+        class="header relative pt-16 items-center flex h-screen"
+        style="max-height: 860px"
+      >
+        <div class="container mx-auto items-center flex flex-wrap">
+          <div class="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
+            <div class="pt-32 sm:pt-0">
+              <h2 class="font-semibold text-4xl text-blueGray-600">
+         Find A Name.
+              </h2>
+              <p class="mt-4 text-lg leading-relaxed text-blueGray-500">
+                Tailwind Starter Kit is Free and Open Source. It does not change
+                or add any CSS to the already one from<!-- -->
+                <a
+                  href="https://tailwindcss.com/?ref=creativetim"
+                  class="text-blueGray-600"
+                  target="_blank"
+                  >TailwindCSS</a
+                >. It features multiple HTML elements and it comes with dynamic
+                components for ReactJS, Vue and Angular.
+              </p>
+              <div class="mt-12 btn-group">
+                <a
+                  class="
+          btn btn-primary
+                  "
+                  href="/learning-lab/tailwind-starter-kit/documentation/download"
+                  >Login</a
+                ><a
+                  href="https://github.com/creativetimofficial/tailwind-starter-kit"
+                  class="
+                 btn-secondary btn
+                  "
+                  target="_blank"
+                  >Register</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          class="
+            absolute
+            top-0
+            b-auto
+            right-0
+            pt-16
+            sm:w-6/12
+            -mt-48
+            sm:mt-0
+            w-10/12
+          "
+          src="https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/ill_header_3.png"
+          alt="..."
+          style="max-height: 860px"
+        />
+      </section>
+        <div
+          class="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute"
+          style="height: 80px"
+        >
+
+          </svg>
+        </div>
+
+              </div>
+            </div>
+    
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container mx-auto">
+          <div class="items-center flex flex-wrap">
+            <div class="w-full md:w-5/12 ml-auto px-12 md:px-4">
+              <div class="md:pr-12">
+                <div
+                  class="
+             
+                    p-3
+                    text-center
+                    inline-flex
+                    items-center
+                    justify-center
+                    w-16
+                    h-16
+                    mb-6
+                
+             
+                  "
+                >
+                  <i class="fas fa-file-alt text-xl"></i>
+                </div>
+                <h3 class="text-3xl font-semibold">Complex Documentation</h3>
+                <p class="mt-4 text-lg leading-relaxed text-blueGray-500">
+                  This extension comes a lot of fully coded examples that help
+                  you get started faster. You can adjust the colors and also the
+                  programming language. You can change the text and images and
+                  you're good to go.
+                </p>
+                <ul class="list-none mt-6">
+                  <li class="py-2">
+                    <div class="flex items-center">
+                      <div>
+                        <span
+                          class="
+                            text-xs
+                            font-semibold
+                            inline-block
+                            py-1
+                            px-2
+                            uppercase
+                            rounded-full
+                            text-blueGray-500
+                            bg-blueGray-50
+                            mr-3
+                          "
+                          ><i class="fas fa-fingerprint"></i
+                        ></span>
+                      </div>
+                      <div>
+                        <h4 class="text-blueGray-500">
+                          Built by Developers for Developers
+                        </h4>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="py-2">
+                    <div class="flex items-center">
+                      <div>
+                        <span
+                          class="
+                            text-xs
+                            font-semibold
+                            inline-block
+                            py-1
+                            px-2
+                            uppercase
+                            rounded-full
+                            text-blueGray-500
+                            bg-blueGray-50
+                            mr-3
+                          "
+                          ><i class="fab fa-html5"></i
+                        ></span>
+                      </div>
+                      <div>
+                        <h4 class="text-blueGray-500">
+                          Carefully crafted code for Components
+                        </h4>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="py-2">
+                    <div class="flex items-center">
+                      <div>
+                        <span
+                          class="
+                            text-xs
+                            font-semibold
+                            inline-block
+                            py-1
+                            px-2
+                            uppercase
+                            rounded-full
+                            text-blueGray-500
+                            bg-blueGray-50
+                            mr-3
+                          "
+                          ><i class="far fa-paper-plane"></i
+                        ></span>
+                      </div>
+                      <div>
+                        <h4 class="text-blueGray-500">
+                          Dynamic Javascript Components
+                        </h4>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="w-full md:w-6/12 mr-auto px-4 pt-24 md:pt-0">
+              <img
+                alt="..."
+                class="max-w-full rounded-lg shadow-xl"
+                style="
+                  transform: scale(1) perspective(1040px) rotateY(-11deg)
+                    rotateX(2deg) rotate(2deg);
+                "
+                src="https://www.creative-tim.com/learning-lab/tailwind-starter-kit/img/documentation.png"
+              />
+            </div>
+          </div>
+        </div>
+      
+      </section>
+ 
+      <section class="py-20 bg-blueGray-600 overflow-hidden">
+        <div class="container mx-auto pb-64">
+          <div class="flex flex-wrap justify-center">
+
+          </div>
+        </div>
+      </section>
+
+      <footer class="relative bg-blueGray-200 pt-8 pb-6">
+        <div
+          class="
+            bottom-auto
+            top-0
+            left-0
+            right-0
+            w-full
+            absolute
+            pointer-events-none
+            overflow-hidden
+            -mt-20
+          "
+          style="height: 80px"
+        >
+  
+            <polygon
+              class="text-blueGray-200 fill-current"
+              points="2560 0 2560 100 0 100"
+            ></polygon>
+          </svg>
+        </div>
+        <div class="container mx-auto px-4">
+          <div class="flex flex-wrap">
+            <div class="w-full md:w-6/12 px-4">
+              <h4 class="text-3xl font-semibold">Let's keep in touch!</h4>
+              <h5 class="text-lg mt-0 mb-2 text-blueGray-600">
+                Find us on any of these platforms, we respond 1-2 business days.
+              </h5>
+              <div class="mt-6">
+                <a href="https://www.twitter.com/creativetim" target="_blank"
+                  ><i
+                    class="
+                      fab
+                      fa-twitter
+                      bg-white
+                      text-lightBlue-400
+                      shadow-lg
+                      font-lg
+                      p-3
+                      items-center
+                      justify-center
+                      align-center
+                      rounded-full
+                      outline-none
+                      focus:outline-none
+                      mr-2
+                      inline-block
+                      text-center
+                    "
+                  ></i></a
+                ><a href="https://www.facebook.com/creativetim" target="_blank"
+                  ><i
+                    class="
+                      fab
+                      fa-facebook-square
+                      bg-white
+                      text-lightBlue-600
+                      shadow-lg
+                      font-lg
+                      p-3
+                      items-center
+                      justify-center
+                      align-center
+                      rounded-full
+                      outline-none
+                      focus:outline-none
+                      mr-2
+                      inline-block
+                      text-center
+                    "
+                  ></i></a
+                ><a href="https://www.dribbble.com/creativetim" target="_blank"
+                  ><i
+                    class="
+                      fab
+                      fa-dribbble
+                      bg-white
+                      text-pink-400
+                      shadow-lg
+                      font-lg
+                      p-3
+                      items-center
+                      justify-center
+                      align-center
+                      rounded-full
+                      outline-none
+                      focus:outline-none
+                      mr-2
+                      inline-block
+                      text-center
+                    "
+                  ></i></a
+                ><a
+                  href="https://www.github.com/creativetimofficial"
+                  target="_blank"
+                  ><i
+                    class="
+                      fab
+                      fa-github
+                      bg-white
+                      text-blueGray-800
+                      shadow-lg
+                      font-lg
+                      p-3
+                      items-center
+                      justify-center
+                      align-center
+                      rounded-full
+                      outline-none
+                      focus:outline-none
+                      mr-2
+                      inline-block
+                      text-center
+                    "
+                  ></i
+                ></a>
+              </div>
+              <p class="text-sm mt-6 text-blueGray-500 font-semibold">
+                Currently v1.1.0. Code<a
+                  href="https://github.com/creativetimofficial/tailwind-starter-kit"
+                  class="text-blueGray-600"
+                  target="_blank"
+                >
+                  <!-- -->licensed MIT</a
+                >, docs<a
+                  href="https://creativecommons.org/licenses/by/4.0/"
+                  targe="_blank"
+                  class="text-blueGray-600"
+                >
+                  <!-- -->CC BY 4.0</a
+                >.
+              </p>
+            </div>
+            <div class="w-full md:w-6/12 px-4">
+              <div class="flex flex-wrap items-top mb-6">
+                <div
+                  class="
+                    w-full
+                    md:w-6/12
+                    xl:w-4/12
+                    pt-6
+                    md:pt-0
+                    md:px-4
+                    ml-auto
+                  "
+                >
+                  <span
+                    class="
+                      block
+                      uppercase
+                      text-blueGray-500 text-sm
+                      font-semibold
+                      mb-2
+                    "
+                    >Useful Links</span
+                  >
+                  <ul class="list-unstyled">
+                    <li>
+                      <a
+                        class="
+                          text-blueGray-600
+                          hover:text-blueGray-800
+                          font-semibold
+                          block
+                          pb-2
+                          text-sm
+                        "
+                        href="https://www.creative-tim.com/presentation"
+                        target="_blank"
+                        >About Us</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="
+                          text-blueGray-600
+                          hover:text-blueGray-800
+                          font-semibold
+                          block
+                          pb-2
+                          text-sm
+                        "
+                        href="https://creative-tim.com/blog"
+                        target="_blank"
+                        >Blog</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="
+                          text-blueGray-600
+                          hover:text-blueGray-800
+                          font-semibold
+                          block
+                          pb-2
+                          text-sm
+                        "
+                        href="https://www.github.com/creativetimofficial/tailwind-starter-kit"
+                        target="_blank"
+                        >Github</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="
+                          text-blueGray-600
+                          hover:text-blueGray-800
+                          font-semibold
+                          block
+                          pb-2
+                          text-sm
+                        "
+                        href="https://www.creative-tim.com/bootstrap-themes/free"
+                        target="_blank"
+                        >Free Products</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="
+                    w-full
+                    md:w-6/12
+                    xl:w-4/12
+                    pt-6
+                    md:pt-0
+                    md:px-4
+                    ml-auto
+                  "
+                >
+                  <span
+                    class="
+                      block
+                      uppercase
+                      text-blueGray-500 text-sm
+                      font-semibold
+                      mb-2
+                    "
+                    >Other Resources</span
+                  >
+                  <ul class="list-unstyled">
+                    <li>
+                      <a
+                        class="
+                          text-blueGray-600
+                          hover:text-blueGray-800
+                          font-semibold
+                          block
+                          pb-2
+                          text-sm
+                        "
+                        href="https://github.com/creativetimofficial/tailwind-starter-kit/blob/master/LICENSE.md"
+                        target="_blank"
+                        >MIT License</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="
+                          text-blueGray-600
+                          hover:text-blueGray-800
+                          font-semibold
+                          block
+                          pb-2
+                          text-sm
+                        "
+                        href="https://creative-tim.com/terms"
+                        target="_blank"
+                        >Terms &amp; Conditions</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="
+                          text-blueGray-600
+                          hover:text-blueGray-800
+                          font-semibold
+                          block
+                          pb-2
+                          text-sm
+                        "
+                        href="https://creative-tim.com/privacy"
+                        target="_blank"
+                        >Privacy Policy</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="
+                          text-blueGray-600
+                          hover:text-blueGray-800
+                          font-semibold
+                          block
+                          pb-2
+                          text-sm
+                        "
+                        href="https://creative-tim.com/contact-us"
+                        target="_blank"
+                        >Contact Us</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr class="my-6 border-blueGray-300" />
+          <div
+            class="
+              flex flex-wrap
+              items-center
+              md:justify-between
+              justify-center
+            "
+          >
+            <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+              <div class="text-sm text-blueGray-500 font-semibold py-1">
+                Copyright ©
+                <!-- -->2021<!-- -->
+                Tailwind Starter Kit by<!-- -->
+                <a
+                  href="https://www.creative-tim.com"
+                  class="text-blueGray-500 hover:text-blueGray-800"
+                  target="_blank"
+                  >Creative Tim</a
+                >.
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
